@@ -1,19 +1,19 @@
 const mongoose = require("mongoose");
 
 const BillingRecordSchema = new mongoose.Schema({
-    patientId: {
+    appointmentId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
+        ref: 'Appointment',
         required: true
     },
     amount: {
         type: Number,
         required: true
     },
-    paymentStatus: {
+    status: {
         type: String,
-        enum: ['paid', 'unpaid'],
-        required: true
+        enum: ["pending", "paid", "failed"],
+        default: "pending",
     },
     date: {
         type: Date,

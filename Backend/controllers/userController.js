@@ -78,7 +78,7 @@ exports.searchProfile = async (req, res) => {
 
     try {
         console.log("Search started");
-            const users = await User.find({
+        const users = await User.find({
             $or: [
                 { username: { $regex: query, $options: "i" } },
                 { email: { $regex: query, $options: "i" } },

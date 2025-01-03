@@ -18,6 +18,9 @@ app.use(express.json());
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/profile", require("./routes/userRoutes"));
 app.use("/api/admin", require("./routes/adminRoutes"));
+app.use("/api/appointments", require("./routes/appointmentRoutes"));
+app.use("/api/doctor", require("./routes/DoctorRoutes"));
+app.use("/api/billing", require("./controllers/BillingController"));
 // Start server
 const PORT = process.env.PORT;
 app.listen(PORT, () => {

@@ -44,7 +44,7 @@ exports.manageDoctors = async (req, res) => {
 
 // Manage Hospital Information
 exports.manageHospital = async (req, res) => {
-    const { hospitalId, name, location, contactInfo, action } = req.body; // action: "add" or "update"
+    const { hospitalId, name, location, contactInfo, action } = req.body;
 
     try {
         if (action === "add") {
